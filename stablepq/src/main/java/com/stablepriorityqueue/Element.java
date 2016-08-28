@@ -14,11 +14,15 @@ public class Element implements Comparable<Element> {
 
     private int key;
     private Object value;
+    
+    public Object getValue() {
+    	return value;
+    }
 
     public int compareTo(Element other) {
         int result = Integer.compare(this.key, other.key);
         if (result == 0) {
-            return -Long.compare(this.time, other.time);
+            return Long.compare(other.time, this.time);
         } else {
             return result;
         }

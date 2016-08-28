@@ -12,6 +12,10 @@ public class PriorityQueue {
         this.queue = new ArrayList<Element>();
         queue.add(new Element(0, "ROOT"));
     }
+    
+    public Element getElement(int index) {
+    	return this.queue.get(index);
+    }
 
     public int left(int i) {
         return i*2;
@@ -27,13 +31,14 @@ public class PriorityQueue {
 
     public void insert(Element element) {
         queue.add(element);
-        System.out.println(toString());
+        System.out.println("added "+element.toString());
+        System.out.println("queue is now "+toString());
         int index = queue.size()-1;
 
         while(index!=1) {
             if (element.compareTo(queue.get(parent(index)))==1) {
                 swap(index, parent(index));
-                System.out.println("--"+toString());
+                System.out.println("--swap: "+toString());
                 index = parent(index);
             } else {
                 break;
@@ -52,11 +57,11 @@ public class PriorityQueue {
     }
 
     public String toString() {
-        String s = "";
+        StringBuffer buf = new StringBuffer();
         for (Element element : queue) {
-            s += String.format("[%s]", element.toString());
+            buf.append(String.format("[%s]", element.toString()));
         }
-        return s;
+        return buf.toString();
     }
 
     public Element maximum() {

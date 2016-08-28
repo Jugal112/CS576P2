@@ -47,6 +47,7 @@ public class Main {
 
         ArrayList<Element> sorted_elements = new ArrayList<>();
         int size = pq.size();
+        System.out.println("Extracting maximums");
         for (int i = 0; i < size; i++) {
             System.out.println(pq.size() + " " + i);
             Element max = pq.extractMaximum();
@@ -54,7 +55,7 @@ public class Main {
             System.out.println(pq);
             sorted_elements.add(max);
         }
-        System.out.println(sorted_elements);
+        System.out.println("sorted: " + sorted_elements);
     }
 
 
