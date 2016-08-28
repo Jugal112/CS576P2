@@ -1,33 +1,33 @@
 # CS576P2
 Stable Priority Queue including JUnit Tests, Emma Coverage Report, and Find Bugs Coverage Report
 
-The source code is located in 
+###The source code is located in 
 
    /stablepq/src/main
 
-The JUnit tests are located in
+###The JUnit tests are located in
 
    /stablepq/src/test
 
-To run the JUnit tests, run the following command
+###To run the JUnit tests, run the following command
 
    "cd stablepq"
    
    "mvn test"
 
-To run the program, run
+###To run the program, run
 
    "cd stablepq"
    
    "java -cp target/stablepq-0.0.1-SNAPSHOT.jar com.stablepriorityqueue.Main"
 
-To view the FindBugs report go to
+###To view the FindBugs report go to
 
    /stablepq/target/site
    
    double click on "findbugs.html"
 
-To view the Emma Coverage report go to
+###To view the Emma Coverage report go to
 
    /stablepq/target/site/emma
    
