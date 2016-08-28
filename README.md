@@ -11,7 +11,13 @@ The JUnit tests are located in
 
 To run the JUnit tests, run the following command
 
+-- "cd stablepq"
 -- "mvn test"
+
+To run the program, run
+
+-- "cd stablepq"
+-- "java -cp target/stablepq-0.0.1-SNAPSHOT.jar com.stablepriorityqueue.Main"
 
 To view the FindBugs report go to
 
